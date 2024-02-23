@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <form id="registrationForm">
+            <div class="input-group">
+                <label for="name">Student Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Enter Email" required>
+            </div>
+            <div class="input-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="text" id="mobile" name="mobile" placeholder="Enter Mobile Number" required>
+            </div>
+            <div class="input-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="input-group">
+                <label>Select Your Class:</label>
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="class[]" value="Class FY"> Class FY
+                    </label>
+                    <label>
+                        <input type="checkbox" name="class[]" value="Class SY"> Class SY
+                    </label>
+                    <label>
+                        <input type="checkbox" name="class[]" value="Class TY"> Class TY
+                    </label>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="city">Select Your City:</label>
+                <select name="city" id="city" required>
+                    <option value="">Select City</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Pune">Pune</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Delhi">Delhi</option>
+                </select>
+            </div>
+            <div class="button">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var userName = document.getElementById('name').value;
+            alert('Dear ' + userName + ', your registration form has been successfully submitted!');
+        });
+    </script>   
+</body>
+</html>
